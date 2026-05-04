@@ -1,0 +1,341 @@
+:root {
+  --text-color: #ff9900;
+  --background-color: #631803;
+  --hover-color: #ff9900;
+  --orange-dark: #bc3d00;
+  --brown: #8b1128;
+  --green: #2b7f35;
+  --light-green: #18a86b;
+  --dark-green: #1e5825;
+  --green-more-dark: #033a11;
+  --yellow: #ffe655;
+  --header-bg-color: #c08330;
+}
+
+$text-color: var(--text-color);
+$brown: var(--brown);
+$hover-color: var(--hover-color);
+$green: var(--green);
+$light-green: var(--light-green);
+$dark-green: var(--dark-green);
+$green-more-dark: var(--green-more-dark);
+$yellow: var(--yellow);
+
+@font-face {
+  font-family: "Matura MT Script Capitals";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/fonts/MATURASC_1.woff") format("woff");
+}
+
+@font-face {
+  font-family: "high_tower";
+  src:
+    url("/fonts/htowert-webfont.woff2") format("woff2"),
+    url("/fonts/htowert-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-attachment: fixed;
+  background-image: url("/images/bg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-color: #7d5c4b;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a,
+a:not([href]) {
+  color: var(--text-color);
+  text-decoration: underline;
+}
+
+.body-text {
+  color: var(--text-color);
+}
+
+.container {
+  max-width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  display: grid;
+  grid-template-areas: "header header"
+    "menu content"
+    "footer footer";
+  grid-template-columns: 1fr 3fr;
+  gap: 0px;
+  border-color: $text-color;
+  padding: 20px;
+  background-color: #631803;
+  border: 1px solid $text-color;
+  padding: 10px;
+}
+
+// .container div {
+//   background-color: #631803;
+//   border: 1px solid $text-color;
+//   padding: 10px;
+// }
+
+div.header {
+  background-color: transparent;
+  border: none;
+  grid-area: header;
+  text-align: center;
+}
+
+div.menu {
+  grid-area: menu;
+  border: 1px solid $text-color;
+}
+
+div.content {
+  grid-area: content;
+  border: 1px solid $text-color;
+}
+
+div.footer {
+  grid-area: footer;
+  text-align: center;  
+  border: 1px solid var(--hover-color);
+}
+
+.content_box {
+    padding: 20px;
+    background-color: #631803;
+    border: 1px solid var(--hover-color);
+    box-shadow: inset 0 0 150px #ff990080;
+    max-width: 99.4%;
+}
+
+
+.content-text {
+  text-align: center;
+  color: var(--text-color);
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  font-weight: 100;
+}
+
+.border-title {
+  font-family: "high_tower";
+  font-size: 2.5rem;
+  line-height: 30px;
+  font-weight: 300;
+  color: #ff9900;
+  border-top: 1px solid #ff9900;
+  border-bottom: 1px solid #ff9900;
+  padding: 3px 0 7px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.delhi-durbar {
+  font-family: 'high_tower';
+  color: $brown;
+  font-size: 4.2rem;
+  font-weight: 100;
+  line-height: 4rem;
+  text-shadow: 2px 2px 6px #000000;
+  margin-top: 3rem;
+}
+
+.grid-1 {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+.grid-1,
+.grid-2,
+.grid-3,
+.grid-4 {
+  display: grid;
+  gap: 18px;
+  margin: 22px 0;
+  align-items: start;
+}
+
+.menu-button {
+  background-image: radial-gradient($dark-green, $dark-green, $green-more-dark, $green-more-dark);
+  font-family: 'high_tower';
+  text-shadow: 2px 2px 6px #000000;
+  font-size: 1rem;
+  width: fit-content;
+  padding: 0.5em 1em;
+  border-radius: 15px;
+  border-width: 2px;
+  border-style: solid;
+  margin: 0.4rem auto;
+  border-color: $text-color;
+  color: $text-color;
+  display: block;
+  
+}
+
+.print-only {
+  display: none;
+}
+// ++++++++++++++++++++++++++++++
+
+// .chapter-title h2 {
+//   font-family: "high_tower";
+//   font-size: 2.1rem;
+//   line-height: 40px;
+//   font-weight: 200;
+//   padding: 3px 20px 7px;
+//   text-align: left;
+// }
+
+// .fleft,
+// .float-left {
+//   float: left;
+//   margin-right: 20px;
+// }
+
+// .fright,
+// .float-right {
+//   float: right;
+//   margin-left: 20px;
+// }
+
+// .clear-both {
+//   clear: both;
+// }
+
+// .clear-right {
+//   clear: right;
+// }
+
+// .buttons {
+//   display: flex;
+//   justify-content: space-between;
+// }
+
+// .print-button {
+//   font-family: "high_tower";
+//   background-image: radial-gradient(
+//     $dark-green,
+//     $dark-green,
+//     $green-more-dark,
+//     $green-more-dark
+//   );
+//   padding: 0.5em 1em;
+//   border-color: $text-color;
+//   color: $text-color;
+//   font-weight: bold;
+//   border-radius: 20px;
+// }
+
+// .print-button:hover {
+//   background-image: radial-gradient(
+//     $light-green,
+//     $light-green,
+//     $dark-green,
+//     $dark-green
+//   );
+// }
+
+// .happy-face img {
+//   display: inline-block;
+//   width: 25px;
+//   height: 25px;
+//   margin: 0;
+// }
+
+// .grid-1,
+// .grid-2,
+// .grid-3,
+// .grid-4 {
+//   display: grid;
+//   gap: 18px;
+//   margin: 22px 0;
+//   align-items: start;
+// }
+
+// .grid-1 {
+//   grid-template-columns: repeat(1, 1fr);
+// }
+
+// .grid-2 {
+//   grid-template-columns: repeat(2, 1fr);
+// }
+
+// .grid-3 {
+//   grid-template-columns: repeat(3, 1fr);
+// }
+
+// .grid-4 {
+//   grid-template-columns: repeat(4, 1fr);
+// }
+
+// .figure-image {
+//   text-align: center;
+//   margin: 1rem 0;
+// }
+
+// .figure-image figcaption {
+//   margin-top: 6px;
+//   font-style: italic;
+// }
+
+// @media (max-width: 768px) {
+//   .grid-2,
+//   .grid-3 {
+//     grid-template-columns: 1fr;
+//   }
+
+//   .fleft,
+//   .fright,
+//   .float-left,
+//   .float-right {
+//     float: none;
+//     margin: 16px 0;
+//   }
+// }
+
+// @media print {
+//   header,
+//   footer,
+//   button,
+//   .no-print {
+//     display: none;
+//   }
+
+//   @page {
+//     margin: 1cm;
+//   }
+
+//   .page-break {
+//     display: block;
+//     page-break-before: always;
+//   }
+
+//   .print-only {
+//     display: block;
+//   }
+// }
